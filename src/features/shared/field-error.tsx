@@ -1,0 +1,14 @@
+type FieldErrorProps = {
+  id: string;
+  message?: string;
+};
+
+export function FieldError({ id, message }: FieldErrorProps) {
+  if (!message) return null;
+
+  return (
+    <p id={id} role="alert" className="text-destructive text-xs font-medium">
+      {message}
+    </p>
+  );
+}
